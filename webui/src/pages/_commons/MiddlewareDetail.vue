@@ -74,7 +74,7 @@
       <div class="app-section-wrap app-boxed app-boxed-xl q-pl-md q-pr-md q-pt-lg q-pb-xl">
         <div class="row no-wrap items-center q-mb-lg app-title">
           <div class="app-title-label">
-            Used by Routers
+            关联的路由
           </div>
         </div>
         <div class="row items-center q-col-gutter-lg">

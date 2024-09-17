@@ -9,7 +9,7 @@
       <q-route-tab
         :to="`/${protocol}/routers`"
         no-caps
-        :label="`${protocolLabel} Routers`"
+        :label="`${protocolLabel} 路由`"
       >
         <q-badge
           v-if="routerTotal !== 0"
@@ -21,7 +21,7 @@
       <q-route-tab
         :to="`/${protocol}/services`"
         no-caps
-        :label="`${protocolLabel} Services`"
+        :label="`${protocolLabel} 服务`"
       >
         <q-badge
           v-if="servicesTotal !== 0"
@@ -34,7 +34,7 @@
         v-if="protocol !== 'udp'"
         :to="`/${protocol}/middlewares`"
         no-caps
-        :label="`${protocolLabel} Middlewares`"
+        :label="`${protocolLabel} 中间件`"
       >
         <q-badge
           v-if="middlewaresTotal !== 0"

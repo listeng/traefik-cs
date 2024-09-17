@@ -32,7 +32,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-info" />
               <div class="app-title-label">
-                Service Details
+                服务详情
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -56,7 +56,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-shield" />
               <div class="app-title-label">
-                Health Check
+                健康检查
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -80,7 +80,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-globe-outline" />
               <div class="app-title-label">
-                Servers
+                服务
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -105,7 +105,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-globe-outline" />
               <div class="app-title-label">
-                Services
+                服务
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -129,7 +129,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-globe-outline" />
               <div class="app-title-label">
-                Mirror Services
+                镜像服务
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -177,7 +177,7 @@
       <div class="app-section-wrap app-boxed app-boxed-xl q-pl-md q-pr-md q-pt-lg q-pb-xl">
         <div class="row no-wrap items-center q-mb-lg app-title">
           <div class="app-title-label">
-            Used by Routers
+            关联路由
           </div>
         </div>
         <div class="row items-center q-col-gutter-lg">

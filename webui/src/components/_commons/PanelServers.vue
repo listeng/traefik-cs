@@ -16,7 +16,7 @@
             class="col-3"
           >
             <div class="text-subtitle2 text-table">
-              Status
+              状态
             </div>
           </div>
           <div class="col-9">
@@ -84,7 +84,7 @@
             >
           </div>
           <div class="block-empty-label">
-            There is no<br>Server available
+            没有<br>后端服务
           </div>
         </div>
       </div>

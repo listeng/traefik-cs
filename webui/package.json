@@ -11,7 +11,7 @@
     "dev": "APP_ENV=development quasar dev",
     "build-quasar": "quasar build",
     "build-staging": "NODE_ENV=production APP_ENV=development yarn build-quasar",
-    "build": "NODE_ENV=production APP_ENV=production yarn build-quasar && yarn transfer spa",
+    "build": "NODE_ENV=production APP_API=/tk-proxy/api APP_ENV=production yarn build-quasar && yarn transfer spa",
     "build:nc": "yarn build",
     "test": "echo \"See package.json => scripts for available tests.\" && exit 0",
     "test:unit": "vitest",

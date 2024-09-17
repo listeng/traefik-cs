@@ -26,7 +26,7 @@
           <div class="row items-start no-wrap">
             <div class="col">
               <div class="text-subtitle2">
-                Type
+                类型
               </div>
               <q-chip
                 dense
@@ -37,7 +37,7 @@
             </div>
             <div class="col">
               <div class="text-subtitle2">
-                PROVIDER
+                提供者
               </div>
               <div class="block-right-text">
                 <q-avatar class="provider-logo">
@@ -54,7 +54,7 @@
           <div class="row items-start no-wrap">
             <div class="col">
               <div class="text-subtitle2">
-                STATUS
+                状态
               </div>
               <div class="block-right-text">
                 <avatar-state :state="status(middleware.status)" />
@@ -72,7 +72,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  ERRORS
+                  错误
                 </div>
                 <q-chip
                   v-for="(errorMsg, errorIndex) in middleware.error"
@@ -90,7 +90,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  PREFIX
+                  前缀
                 </div>
                 <q-chip
                   dense
@@ -107,7 +107,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  USERS
+                  用户
                 </div>
                 <q-chip
                   v-for="(user, key) in exData(middleware).users"
@@ -125,7 +125,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Users File
+                  用户文件
                 </div>
                 <q-chip
                   dense
@@ -141,7 +141,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Realm
+                  区域
                 </div>
                 <q-chip
                   dense
@@ -157,7 +157,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Remove Header
+                  移除头
                 </div>
                 <boolean-state :value="exData(middleware).removeHeader" />
               </div>
@@ -168,7 +168,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Header Field
+                  头字段
                 </div>
                 <q-chip
                   dense
@@ -185,7 +185,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Chain
+                  链路
                 </div>
                 <q-chip
                   v-for="(mi, key) in exData(middleware).middlewares"
@@ -204,7 +204,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Max Request Body Bytes
+                  最大请求体大小
                 </div>
                 <q-chip
                   dense
@@ -215,7 +215,7 @@
               </div>
               <div class="col">
                 <div class="text-subtitle2">
-                  Mem Request Body Bytes
+                  内存请求体大小
                 </div>
                 <q-chip
                   dense
@@ -231,7 +231,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Max Response Body Bytes
+                  最大响应体大小
                 </div>
                 <q-chip
                   dense
@@ -242,7 +242,7 @@
               </div>
               <div class="col">
                 <div class="text-subtitle2">
-                  Mem Response Body Bytes
+                  内存响应体大小
                 </div>
                 <q-chip
                   dense
@@ -258,7 +258,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Retry Expression
+                  重试表达式
                 </div>
                 <q-chip
                   dense
@@ -275,7 +275,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Expression
+                  表达式
                 </div>
                 <q-chip
                   dense
@@ -292,7 +292,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Compress
+                  压缩
                 </div>
                 <boolean-state :value="!!middleware.compress" />
               </div>
@@ -304,7 +304,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Service
+                  服务
                 </div>
                 <q-chip
                   dense
@@ -321,7 +321,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Query
+                  请求
                 </div>
                 <q-chip
                   dense
@@ -337,7 +337,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Status
+                  状态
                 </div>
                 <q-chip
                   v-for="(st, key) in exData(middleware).status"
@@ -356,7 +356,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Address
+                  地址
                 </div>
                 <q-chip
                   dense
@@ -389,7 +389,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Auth Response Headers
+                  授权响应头
                 </div>
                 <q-chip
                   v-for="(respHeader, key) in exData(middleware).authResponseHeaders"
@@ -407,7 +407,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Auth Request Headers
+                  授权请求头
                 </div>
                 <q-chip
                   v-for="(reqHeader, key) in exData(middleware).authRequestHeaders"
@@ -426,7 +426,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Custom Request Headers
+                  自定义请求头
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).customRequestHeaders"
@@ -444,7 +444,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Custom Response Headers
+                  自定义响应头
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).customResponseHeaders"
@@ -462,7 +462,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Allow Credentials
+                  访问控制允许凭证
                 </div>
                 <boolean-state :value="!!exData(middleware).accessControlAllowCredentials" />
               </div>
@@ -473,7 +473,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Allow Headers
+                  访问控制允许头
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).accessControlAllowHeaders"
@@ -491,7 +491,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Allow Methods
+                  访问控制允许方法
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).accessControlAllowMethods"
@@ -509,7 +509,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Allow Origin
+                  访问控制允许来源
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).accessControlAllowOriginList"
@@ -527,7 +527,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Allow Origin Regex
+                  访问控制允许来源正则
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).accessControlAllowOriginListRegex"
@@ -545,7 +545,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Expose Headers
+                  访问控制暴露头
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).accessControlExposeHeaders"
@@ -563,7 +563,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Access Control Max Age
+                  访问控制最大期限
                 </div>
                 <q-chip
                   dense
@@ -579,7 +579,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Add Vary Header
+                  增加不定头
                 </div>
                 <boolean-state :value="!!exData(middleware).addVaryHeader" />
               </div>
@@ -590,7 +590,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Allowed Hosts
+                  允许主机
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).allowedHosts"
@@ -1341,7 +1341,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Regex
+                  正则
                 </div>
                 <q-chip
                   dense
@@ -1358,7 +1358,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Replacement
+                  替换
                 </div>
                 <q-chip
                   dense
@@ -1375,7 +1375,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Permanent
+                  永久
                 </div>
                 <boolean-state :value="!!exData(middleware).permanent" />
               </div>
@@ -1387,7 +1387,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Scheme
+                  协议
                 </div>
                 <q-chip
                   dense
@@ -1404,7 +1404,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Path
+                  路径
                 </div>
                 <q-chip
                   dense
@@ -1421,7 +1421,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Regex
+                  正则
                 </div>
                 <q-chip
                   dense
@@ -1438,7 +1438,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Replacement
+                  替换
                 </div>
                 <q-chip
                   dense
@@ -1456,7 +1456,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Attempts
+                  重试
                 </div>
                 <q-chip
                   dense
@@ -1473,7 +1473,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Prefixes
+                  前缀
                 </div>
                 <q-chip
                   v-for="(prefix, key) in exData(middleware).prefixes"
@@ -1492,7 +1492,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Regex
+                  正则
                 </div>
                 <q-chip
                   v-for="(exp, key) in exData(middleware).regex"
@@ -1512,7 +1512,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Set
+                  设置
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).set"
@@ -1530,7 +1530,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Add
+                  增加
                 </div>
                 <q-chip
                   v-for="(val, key) in exData(middleware).add"
@@ -1548,7 +1548,7 @@
             <div class="row items-start no-wrap">
               <div class="col">
                 <div class="text-subtitle2">
-                  Remove
+                  移除
                 </div>
                 <q-chip
                   v-for="(name, key) in exData(middleware).remove"

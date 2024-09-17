@@ -13,7 +13,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-log-in-outline" />
               <div class="app-title-label">
-                Entrypoints
+                入口
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -117,7 +117,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-flash" />
               <div class="app-title-label">
-                Service
+                服务
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -172,7 +172,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-info" />
               <div class="app-title-label">
-                Router Details
+                路由详情
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -220,7 +220,7 @@
             <div class="row no-wrap items-center q-mb-lg app-title">
               <q-icon name="eva-layers" />
               <div class="app-title-label">
-                Middlewares
+                中间件
               </div>
             </div>
             <div class="row items-start q-col-gutter-lg">
@@ -305,10 +305,10 @@ export default defineComponent({
       return this.routerByName.item.tls
     },
     middlewareType () {
-      return this.$route.meta.protocol.toUpperCase() + ' Middlewares'
+      return this.$route.meta.protocol.toUpperCase() + ' 中间件'
     },
     routerType () {
-      return this.$route.meta.protocol.toUpperCase() + ' Router'
+      return this.$route.meta.protocol.toUpperCase() + ' 路由'
     },
     ...mapGetters('http', { http_routerByName: 'routerByName' }),
     ...mapGetters('tcp', { tcp_routerByName: 'routerByName' }),

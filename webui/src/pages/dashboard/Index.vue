@@ -5,7 +5,7 @@
         <div class="row no-wrap items-center q-mb-lg app-title">
           <q-icon name="eva-log-in-outline" />
           <div class="app-title-label">
-            Entrypoints
+            入口
           </div>
         </div>
         <div
@@ -196,7 +196,7 @@
         <div class="row no-wrap items-center q-mb-lg app-title">
           <q-icon name="eva-toggle-right" />
           <div class="app-title-label">
-            Features
+            功能
           </div>
         </div>
         <div
@@ -243,7 +243,7 @@
         <div class="row no-wrap items-center q-mb-lg app-title">
           <q-icon name="eva-cube" />
           <div class="app-title-label">
-            Providers
+            提供者
           </div>
         </div>
         <div

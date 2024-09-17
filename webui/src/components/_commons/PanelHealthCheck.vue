@@ -15,7 +15,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              SCHEME
+              协议
             </div>
             <q-chip
               dense
@@ -29,7 +29,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              INTERVAL
+              间隔
             </div>
             <q-chip
               dense
@@ -47,7 +47,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              PATH
+              路径
             </div>
             <q-chip
               dense
@@ -61,7 +61,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              TIMEOUT
+              超时
             </div>
             <q-chip
               dense
@@ -79,7 +79,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              PORT
+              端口
             </div>
             <q-chip
               dense
@@ -93,7 +93,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              HOSTNAME
+              主机
             </div>
             <q-chip
               dense
@@ -108,7 +108,7 @@
         <div class="row items-start">
           <div class="col-12">
             <div class="text-subtitle2">
-              HEADERS
+              头
             </div>
           </div>
           <div

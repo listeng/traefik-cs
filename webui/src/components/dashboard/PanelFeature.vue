@@ -8,7 +8,7 @@
       <div class="row items-center no-wrap">
         <div class="col">
           <div class="text-subtitle2">
-            {{ featureKey }}
+            {{ trLabel(featureKey) }}
           </div>
         </div>
       </div>
@@ -50,6 +50,20 @@ export default {
       } else {
         return this.featureVal
       }
+    }
+  },
+  methods: {
+    trLabel (t) {
+      switch (t.toLowerCase()) {
+        case 'tracing':
+          return '链路跟踪'
+        case 'metrics':
+          return '性能监控'
+        case 'accesslog':
+          return '访问日志'
+      }
+
+      return t
     }
   }
 }

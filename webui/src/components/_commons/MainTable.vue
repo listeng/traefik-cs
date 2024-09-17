@@ -14,7 +14,7 @@
               :class="getColumn(column.name).sortable ? `text-${column.align} cursor-pointer`: `text-${column.align}`"
               @click="getColumn(column.name).sortable ? onSortClick(column.name) : null"
             >
-              {{ column.label }}
+              {{ trLabel(column.label) }}
               <i
                 v-if="currentSort === column.name"
                 class="material-icons"
@@ -33,7 +33,7 @@
               <q-icon
                 name="warning"
                 style="font-size: 1.5rem"
-              /> No data available
+              /> 没有数据
             </td>
           </tr>
         </tfoot>
@@ -143,6 +143,42 @@ export default defineComponent({
     }
   },
   methods: {
+    trLabel (t) {
+      const tt = t.trim()
+      switch (tt) {
+        case 'Status':
+          return '状态'
+
+        case 'Rule':
+          return '规则'
+
+        case 'Entrypoints':
+          return '入口'
+
+        case 'Name':
+          return '名称'
+
+        case 'Service':
+          return '服务'
+
+        case 'Provider':
+          return '提供者'
+
+        case 'Priority':
+          return '优先级'
+
+        case 'Type':
+          return '类型'
+
+        case 'Servers':
+          return '服务'
+
+        default:
+          break
+      }
+
+      return t
+    },
     getColumn (columnName) {
       return this.columns.find(c => c.name === columnName) || {}
     },

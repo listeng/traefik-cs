@@ -242,7 +242,7 @@ func (i *Provider) apiConfiguration(cfg *dynamic.Configuration) {
 			EntryPoints: []string{defaultInternalEntryPointName},
 			Service:     "api@internal",
 			Priority:    math.MaxInt - 1,
-			Rule:        "PathPrefix(`/api`)",
+			Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/api`)",
 			RuleSyntax:  "v3",
 		}
 
@@ -251,7 +251,7 @@ func (i *Provider) apiConfiguration(cfg *dynamic.Configuration) {
 				EntryPoints: []string{defaultInternalEntryPointName},
 				Service:     "dashboard@internal",
 				Priority:    math.MaxInt - 2,
-				Rule:        "PathPrefix(`/`)",
+				Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/`)",
 				RuleSyntax:  "v3",
 				Middlewares: []string{"dashboard_redirect@internal", "dashboard_stripprefix@internal"},
 			}
@@ -259,12 +259,12 @@ func (i *Provider) apiConfiguration(cfg *dynamic.Configuration) {
 			cfg.HTTP.Middlewares["dashboard_redirect"] = &dynamic.Middleware{
 				RedirectRegex: &dynamic.RedirectRegex{
 					Regex:       `^(http:\/\/(\[[\w:.]+\]|[\w\._-]+)(:\d+)?)\/$`,
-					Replacement: "${1}/dashboard/",
+					Replacement: "${1}" + i.staticCfg.API.BaseURL + "/dashboard/",
 					Permanent:   true,
 				},
 			}
 			cfg.HTTP.Middlewares["dashboard_stripprefix"] = &dynamic.Middleware{
-				StripPrefix: &dynamic.StripPrefix{Prefixes: []string{"/dashboard/", "/dashboard"}},
+				StripPrefix: &dynamic.StripPrefix{Prefixes: []string{i.staticCfg.API.BaseURL + "/dashboard/", i.staticCfg.API.BaseURL + "/dashboard"}},
 			}
 		}
 
@@ -273,8 +273,13 @@ func (i *Provider) apiConfiguration(cfg *dynamic.Configuration) {
 				EntryPoints: []string{defaultInternalEntryPointName},
 				Service:     "api@internal",
 				Priority:    math.MaxInt - 1,
-				Rule:        "PathPrefix(`/debug`)",
+				Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/debug`)",
 				RuleSyntax:  "v3",
+				Middlewares: []string{"debug_stripprefix@internal"},
+			}
+
+			cfg.HTTP.Middlewares["debug_stripprefix"] = &dynamic.Middleware{
+				StripPrefix: &dynamic.StripPrefix{Prefixes: []string{i.staticCfg.API.BaseURL}},
 			}
 		}
 	}
@@ -296,7 +301,7 @@ func (i *Provider) pingConfiguration(cfg *dynamic.Configuration) {
 			EntryPoints: []string{i.staticCfg.Ping.EntryPoint},
 			Service:     "ping@internal",
 			Priority:    math.MaxInt,
-			Rule:        "PathPrefix(`/ping`)",
+			Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/ping`)",
 			RuleSyntax:  "v3",
 		}
 	}
@@ -314,7 +319,7 @@ func (i *Provider) restConfiguration(cfg *dynamic.Configuration) {
 			EntryPoints: []string{defaultInternalEntryPointName},
 			Service:     "rest@internal",
 			Priority:    math.MaxInt,
-			Rule:        "PathPrefix(`/api/providers`)",
+			Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/api/providers`)",
 			RuleSyntax:  "v3",
 		}
 	}
@@ -332,7 +337,7 @@ func (i *Provider) prometheusConfiguration(cfg *dynamic.Configuration) {
 			EntryPoints: []string{i.staticCfg.Metrics.Prometheus.EntryPoint},
 			Service:     "prometheus@internal",
 			Priority:    math.MaxInt,
-			Rule:        "PathPrefix(`/metrics`)",
+			Rule:        "PathPrefix(`" + i.staticCfg.API.BaseURL + "/metrics`)",
 			RuleSyntax:  "v3",
 		}
 	}

@@ -12,7 +12,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              STATUS
+              状态
             </div>
             <div class="block-right-text">
               <avatar-state :state="status(data.status)" />
@@ -23,7 +23,7 @@
           </div>
           <div class="col">
             <div class="text-subtitle2">
-              PROVIDER
+              提供者
             </div>
             <div class="block-right-text">
               <q-avatar class="provider-logo">
@@ -40,7 +40,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              RULE
+              规则
             </div>
             <q-chip
               dense
@@ -55,7 +55,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              NAME
+              名称
             </div>
             <q-chip
               dense
@@ -70,7 +70,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              ENTRYPOINTS
+              入口
             </div>
             <q-chip
               v-for="(entryPoint, index) in data.using"
@@ -87,7 +87,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              SERVICE
+              服务
             </div>
             <q-chip
               dense
@@ -105,7 +105,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              PRIORITY
+              优先级
             </div>
             <q-chip
               dense
@@ -120,7 +120,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              ERRORS
+              错误
             </div>
             <q-chip
               v-for="(errorMsg, index) in data.error"

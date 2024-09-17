@@ -18,7 +18,7 @@
             flat
             icon-right="eva-arrow-forward-outline"
             no-caps
-            label="Explore"
+            label="详情"
             size="md"
             class="text-weight-bold"
           />
@@ -40,7 +40,7 @@
                 <avatar-state state="positive" />
               </q-item-section>
               <q-item-section class="label-state-text">
-                <q-item-label>Success</q-item-label>
+                <q-item-label>成功</q-item-label>
                 <q-item-label
                   caption
                   lines="1"
@@ -60,7 +60,7 @@
                 <avatar-state state="warning" />
               </q-item-section>
               <q-item-section class="label-state-text">
-                <q-item-label>Warnings</q-item-label>
+                <q-item-label>警告</q-item-label>
                 <q-item-label
                   caption
                   lines="1"
@@ -80,7 +80,7 @@
                 <avatar-state state="negative" />
               </q-item-section>
               <q-item-section class="label-state-text">
-                <q-item-label>Errors</q-item-label>
+                <q-item-label>错误</q-item-label>
                 <q-item-label
                   caption
                   lines="1"
@@ -142,10 +142,30 @@ export default defineComponent({
   },
   computed: {
     getName () {
-      return Helps.capFirstLetter(this.name)
+      const name = Helps.capFirstLetter(this.name)
+      switch (name) {
+        case 'Routers':
+          return '路由'
+
+        case 'Services':
+          return '服务'
+
+        case 'Middlewares':
+          return '中间件'
+      }
+      return name
     },
     getUrl () {
-      return `/${this.type}/${this.getName.toLowerCase()}`
+      const name = this.getName.toLowerCase();
+      switch (name) {
+        case '路由':
+          return `/${this.type}/routers`
+        case '服务':
+          return `/${this.type}/services`
+        case '中间件':
+          return `/${this.type}/middlewares`
+      }
+      return `/${this.type}/${name}`
     }
   },
   methods: {

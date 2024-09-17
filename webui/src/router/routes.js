@@ -12,7 +12,7 @@ const routes = [
         name: 'dashboard',
         component: () => import('pages/dashboard/Index.vue'),
         meta: {
-          title: 'Dashboard'
+          title: '概览'
         }
       }
     ]
@@ -32,7 +32,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Routers'
+          title: 'HTTP 路由'
         }
       },
       {
@@ -45,7 +45,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Router Detail'
+          title: 'HTTP 路由详情'
         }
       },
       {
@@ -58,7 +58,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Services'
+          title: 'HTTP 服务'
         }
       },
       {
@@ -71,7 +71,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Service Detail'
+          title: 'HTTP 服务详情'
         }
       },
       {
@@ -84,7 +84,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Middlewares'
+          title: 'HTTP 中间件'
         }
       },
       {
@@ -97,7 +97,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'http',
-          title: 'HTTP Middleware Detail'
+          title: 'HTTP 中间件详情'
         }
       }
     ]
@@ -117,7 +117,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Routers'
+          title: 'TCP 路由'
         }
       },
       {
@@ -130,7 +130,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Router Detail'
+          title: 'TCP 路由详情'
         }
       },
       {
@@ -143,7 +143,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Services'
+          title: 'TCP 服务'
         }
       },
       {
@@ -156,7 +156,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Service Detail'
+          title: 'TCP 服务详情'
         }
       },
       {
@@ -169,7 +169,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Middlewares'
+          title: 'TCP 中间件'
         }
       },
       {
@@ -182,7 +182,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'tcp',
-          title: 'TCP Middleware Detail'
+          title: 'TCP 中间件详情'
         }
       }
     ]
@@ -202,7 +202,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'udp',
-          title: 'TCP Routers'
+          title: 'TCP 路由'
         }
       },
       {
@@ -215,7 +215,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'udp',
-          title: 'TCP Router Detail'
+          title: 'TCP 路由详情'
         }
       },
       {
@@ -228,7 +228,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'udp',
-          title: 'TCP Services'
+          title: 'TCP 服务'
         }
       },
       {
@@ -241,7 +241,7 @@ const routes = [
         props: { default: true, NavBar: true },
         meta: {
           protocol: 'udp',
-          title: 'TCP Service Detail'
+          title: 'TCP 服务详情'
         }
       }
     ]

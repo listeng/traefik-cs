@@ -15,7 +15,7 @@
             class="col"
           >
             <div class="text-subtitle2">
-              TYPE
+              类型
             </div>
             <q-chip
               dense
@@ -26,7 +26,7 @@
           </div>
           <div class="col">
             <div class="text-subtitle2">
-              PROVIDER
+              提供者
             </div>
             <div class="block-right-text">
               <q-avatar class="provider-logo">
@@ -43,7 +43,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              STATUS
+              状态
             </div>
             <div class="block-right-text">
               <avatar-state :state="status(data.status)" />
@@ -58,7 +58,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              Main Service
+              主服务
             </div>
             <q-chip
               dense
@@ -74,7 +74,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              Pass Host Header
+              传递主机头
             </div>
             <boolean-state :value="data.loadBalancer.passHostHeader" />
           </div>
@@ -85,13 +85,13 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              Proxy Protocol
+              代理协议
             </div>
             <q-chip
               dense
               class="app-chip app-chip-name"
             >
-              Version {{ data.loadBalancer.proxyProtocol.version }}
+              版本 {{ data.loadBalancer.proxyProtocol.version }}
             </q-chip>
           </div>
         </div>
@@ -101,7 +101,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              Main Service
+              主服务
             </div>
             <q-chip
               dense
@@ -118,7 +118,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              Fallback Service
+              故障转移服务
             </div>
             <q-chip
               dense

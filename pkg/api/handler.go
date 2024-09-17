@@ -82,32 +82,32 @@ func (h Handler) createRouter() *mux.Router {
 		DebugHandler{}.Append(router)
 	}
 
-	router.Methods(http.MethodGet).Path("/api/rawdata").HandlerFunc(h.getRuntimeConfiguration)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/rawdata").HandlerFunc(h.getRuntimeConfiguration)
 
 	// Experimental endpoint
-	router.Methods(http.MethodGet).Path("/api/overview").HandlerFunc(h.getOverview)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/overview").HandlerFunc(h.getOverview)
 
-	router.Methods(http.MethodGet).Path("/api/entrypoints").HandlerFunc(h.getEntryPoints)
-	router.Methods(http.MethodGet).Path("/api/entrypoints/{entryPointID}").HandlerFunc(h.getEntryPoint)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/entrypoints").HandlerFunc(h.getEntryPoints)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/entrypoints/{entryPointID}").HandlerFunc(h.getEntryPoint)
 
-	router.Methods(http.MethodGet).Path("/api/http/routers").HandlerFunc(h.getRouters)
-	router.Methods(http.MethodGet).Path("/api/http/routers/{routerID}").HandlerFunc(h.getRouter)
-	router.Methods(http.MethodGet).Path("/api/http/services").HandlerFunc(h.getServices)
-	router.Methods(http.MethodGet).Path("/api/http/services/{serviceID}").HandlerFunc(h.getService)
-	router.Methods(http.MethodGet).Path("/api/http/middlewares").HandlerFunc(h.getMiddlewares)
-	router.Methods(http.MethodGet).Path("/api/http/middlewares/{middlewareID}").HandlerFunc(h.getMiddleware)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/routers").HandlerFunc(h.getRouters)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/routers/{routerID}").HandlerFunc(h.getRouter)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/services").HandlerFunc(h.getServices)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/services/{serviceID}").HandlerFunc(h.getService)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/middlewares").HandlerFunc(h.getMiddlewares)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/http/middlewares/{middlewareID}").HandlerFunc(h.getMiddleware)
 
-	router.Methods(http.MethodGet).Path("/api/tcp/routers").HandlerFunc(h.getTCPRouters)
-	router.Methods(http.MethodGet).Path("/api/tcp/routers/{routerID}").HandlerFunc(h.getTCPRouter)
-	router.Methods(http.MethodGet).Path("/api/tcp/services").HandlerFunc(h.getTCPServices)
-	router.Methods(http.MethodGet).Path("/api/tcp/services/{serviceID}").HandlerFunc(h.getTCPService)
-	router.Methods(http.MethodGet).Path("/api/tcp/middlewares").HandlerFunc(h.getTCPMiddlewares)
-	router.Methods(http.MethodGet).Path("/api/tcp/middlewares/{middlewareID}").HandlerFunc(h.getTCPMiddleware)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/routers").HandlerFunc(h.getTCPRouters)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/routers/{routerID}").HandlerFunc(h.getTCPRouter)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/services").HandlerFunc(h.getTCPServices)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/services/{serviceID}").HandlerFunc(h.getTCPService)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/middlewares").HandlerFunc(h.getTCPMiddlewares)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/tcp/middlewares/{middlewareID}").HandlerFunc(h.getTCPMiddleware)
 
-	router.Methods(http.MethodGet).Path("/api/udp/routers").HandlerFunc(h.getUDPRouters)
-	router.Methods(http.MethodGet).Path("/api/udp/routers/{routerID}").HandlerFunc(h.getUDPRouter)
-	router.Methods(http.MethodGet).Path("/api/udp/services").HandlerFunc(h.getUDPServices)
-	router.Methods(http.MethodGet).Path("/api/udp/services/{serviceID}").HandlerFunc(h.getUDPService)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/udp/routers").HandlerFunc(h.getUDPRouters)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/udp/routers/{routerID}").HandlerFunc(h.getUDPRouter)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/udp/services").HandlerFunc(h.getUDPServices)
+	router.Methods(http.MethodGet).Path(h.staticConfig.API.BaseURL + "/api/udp/services/{serviceID}").HandlerFunc(h.getUDPService)
 
 	version.Handler{}.Append(router)
 

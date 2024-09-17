@@ -10,10 +10,10 @@
       rounded
       unelevated
       :options="[
-        {label: 'All Status', value: ''},
-        {label: 'Success', value: 'enabled'},
-        {label: 'Warnings', value: 'warning'},
-        {label: 'Errors', value: 'disabled'}
+        {label: '全部状态', value: ''},
+        {label: '成功', value: 'enabled'},
+        {label: '警告', value: 'warning'},
+        {label: '错误', value: 'disabled'}
       ]"
     />
     <q-space />
@@ -24,7 +24,7 @@
       outlined
       type="search"
       debounce="500"
-      placeholder="Search"
+      placeholder="搜索"
       :bg-color="$q.dark.isActive ? undefined : 'white'"
       class="bar-search"
     >

@@ -23,7 +23,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              OPTIONS
+              选项
             </div>
             <q-chip
               dense
@@ -38,7 +38,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              PASSTHROUGH
+              直通
             </div>
             <boolean-state :value="data.passthrough" />
           </div>
@@ -48,7 +48,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              CERTIFICATE RESOLVER
+              证书解析
             </div>
             <q-chip
               dense
@@ -63,7 +63,7 @@
         <div class="row items-start no-wrap">
           <div class="col">
             <div class="text-subtitle2">
-              DOMAINS
+              域名
             </div>
             <div
               v-for="(domain, key) in data.domains"
@@ -112,7 +112,7 @@
             >
           </div>
           <div class="block-empty-label">
-            There is no<br>TLS configured
+            没有<br>配置证书
           </div>
         </div>
       </div>
