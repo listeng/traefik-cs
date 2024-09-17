@@ -27,15 +27,16 @@ var (
 )
 
 // Handler expose version routes.
-type Handler struct{}
+type Handler struct {
+}
 
 var templatesRenderer = render.New(render.Options{
 	Directory: "nowhere",
 })
 
 // Append adds version routes on a router.
-func (v Handler) Append(router *mux.Router) {
-	router.Methods(http.MethodGet).Path("/api/version").
+func (v Handler) Append(router *mux.Router, BaseURL string) {
+	router.Methods(http.MethodGet).Path(BaseURL + "/api/version").
 		HandlerFunc(func(response http.ResponseWriter, request *http.Request) {
 			v := struct {
 				Version            string
