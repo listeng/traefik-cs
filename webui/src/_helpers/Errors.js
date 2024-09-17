@@ -24,7 +24,13 @@ class Errors {
     console.log('handleResponse', error, error.response)
     const body = error.response.data
     if (error.response.status === 401) {
-      // TODO - actions...
+      Notify.create({
+        color: 'negative',
+        position: 'top',
+        message: '无权访问',
+        icon: 'report_problem'
+      })
+      return Promise.reject(body)
     }
 
     // Avoid to notify when reaching end of an infinite scroll

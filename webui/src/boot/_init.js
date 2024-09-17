@@ -20,6 +20,31 @@ export default async ({ app, router }) => {
   APP.api.interceptors.request.use((config) => {
     console.log('interceptors -> config', config)
     // config.headers['Accept'] = '*/*'
+
+    const authAdmin = localStorage.getItem('pb_admin_auth');
+
+    if (authAdmin) {
+      try {
+        const authData = JSON.parse(authAdmin);
+        if (authData.token) {
+          config.headers['Authorization'] = authData.token;
+        }
+      } catch {
+      }
+    } else {
+      const authUser = localStorage.getItem('pocketbase_auth');
+
+      if (authUser) {
+        try {
+          const authData = JSON.parse(authUser);
+          if (authData.token) {
+            config.headers['Authorization'] = `Bearer ${authData.token}`;
+          }
+        } catch {
+        }
+      }
+    }
+      
     return config
   })
 
