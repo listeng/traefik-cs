@@ -38,7 +38,7 @@ export default async ({ app, router }) => {
         try {
           const authData = JSON.parse(authUser);
           if (authData.token) {
-            config.headers['Authorization'] = `Bearer ${authData.token}`;
+            config.headers['Authorization'] = authData.token;
           }
         } catch {
         }
